@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block body %}
+    <div class="auth-form-container">
+        <div class="note-list-container mb-3">
+            <ul class="list-group note-list">
+                {% for note in user.notes %}
+                <li class="list-group-item">
+                    {{note.data}}
+                    <button type="button" data-noteid="{{note.id}}" class="close btn btn-danger delete-list">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <form method="POST" id="addNewNote">
+            <div class="form-group mb-3">
+                <label class="text-primary" for="note">Add New Note</label>
+                <textarea type="note" name="note" class="form-control" 
+                id="note" ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Note</button>
+        </form>
+    </div>
+{% endblock %}

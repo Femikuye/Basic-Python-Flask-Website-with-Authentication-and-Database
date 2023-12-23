@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title %} Registeration Page {% endblock %}
+{% block body %}
+    <div class="auth-form-container">
+        <h3>Sign up For A New Account</h3>
+        <form method="POST" id="registerForm">
+            <div class="form-group mb-3">
+                <label for="firstName">First Name</label>
+                <input type="text" name="first-name" 
+                class="form-control" id="firstName" placeholder="Enter Your First Name">
+            </div>
+            <div class="form-group mb-3">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="last-name" class="form-control" 
+                id="lastName" placeholder="Enter Your Last Name">
+            </div>
+            <div class="form-group mb-3">
+                <label for="userName">User Name</label>
+                <input type="text" name="user-name" class="form-control" 
+                id="userName" placeholder="Enter User Name">
+            </div>
+            <div class="form-group mb-3">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" class="form-control" 
+                id="email" placeholder="Enter Your Email">
+            </div>
+            <div class="form-group mb-3">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" 
+                id="password" placeholder="Password">
+            </div>
+            <div class="form-group mb-3">
+                <label for="password2">Confirm Password</label>
+                <input type="password" name="password2" class="form-control" 
+                id="password2" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}
